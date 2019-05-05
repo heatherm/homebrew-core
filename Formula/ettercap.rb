@@ -28,6 +28,7 @@ class Ettercap < Formula
   depends_on "ncurses" if DevelopmentTools.clang_build_version >= 1000
   depends_on "openssl"
   depends_on "pcre"
+  depends_on "geoip"
 
   def install
     args = std_cmake_args + %W[
