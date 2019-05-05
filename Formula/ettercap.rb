@@ -23,12 +23,13 @@ class Ettercap < Formula
   end
 
   depends_on "cmake" => :build
+  depends_on "geoip"
   depends_on "gtk+3"
   depends_on "libnet"
   depends_on "ncurses" if DevelopmentTools.clang_build_version >= 1000
   depends_on "openssl"
   depends_on "pcre"
-
+  
   def install
     args = std_cmake_args + %W[
       -DBUNDLED_LIBS=OFF
